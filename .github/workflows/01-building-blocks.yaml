@@ -1,0 +1,20 @@
+name: 01 building blocks
+on: push, workflow_dispatch
+
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: firstJob
+        run: echo "Hello world"
+  secondjob:
+    steps:
+      - name: failed steps
+        run: |
+          echo "I"
+          echo " will "
+          echo " fail."
+      - name: echo-goodbye
+        run: echo "Goodbye!"
+                  
+
